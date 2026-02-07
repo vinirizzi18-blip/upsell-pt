@@ -184,9 +184,10 @@ const App: React.FC = () => {
         {/* 10. Call to Action Final - Limpo sem selos extras */}
         <section className="mt-24 space-y-12 flex flex-col items-center">
           <div className="w-full max-w-2xl">
-            <button className="w-full bg-[#22c55e] hover:bg-[#16a34a] text-white py-8 px-4 rounded-[2rem] font-black text-2xl md:text-3xl shadow-2xl transform active:scale-95 transition-all uppercase tracking-tighter leading-tight">
-              SIM! QUERO TER MAIS RESULTADOS COM O PLANO
-            </button>
+           <!-- HOTMART - Sales Funnel Widget -->
+<!--- sales funnel container --->
+<div id="hotmart-sales-funnel"></div>
+
           </div>
           
           <button className="text-slate-400 hover:text-slate-600 font-bold text-sm md:text-base uppercase underline decoration-2 underline-offset-4 transition-colors max-w-xl">
