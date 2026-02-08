@@ -195,7 +195,9 @@ const App: React.FC = () => {
         </section>
 
       </main>
-
+<!-- HOTMART - Sales Funnel Widget -->
+<!--- sales funnel container --->
+<div id="hotmart-sales-funnel"></div>
       <footer className="mt-40 border-t border-slate-200 py-20 px-4 text-center">
         <div className="max-w-2xl mx-auto space-y-6 opacity-30">
            <p className="text-[10px] text-slate-500 font-medium uppercase tracking-[0.2em]">
