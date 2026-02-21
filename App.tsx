@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { CheckCircle2, AlertTriangle, Star } from 'lucide-react';
-// Importa do seu ficheiro que se chama 'constantes.tsx'
 import { TESTIMONIALS } from './constantes';
 
 const App: React.FC = () => {
@@ -46,6 +45,9 @@ const App: React.FC = () => {
             <span className="font-bold">⚠️ Estás prestes a finalizar a tua encomenda.</span><br />
             Lê com atenção — se fechares esta página, perderás esta oferta.
           </p>
+          <p className="text-slate-800 text-sm md:text-base">
+            A tua encomenda <span className="font-bold">ainda não está concluída.</span> Não feches esta página — esta oferta está disponível apenas agora.
+          </p>
         </div>
       </div>
 
@@ -57,40 +59,53 @@ const App: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="rounded-[2.5rem] overflow-hidden shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?q=80&w=1000&auto=format&fit=crop" alt="Mulher saudável" className="w-full h-auto block" />
+            <img src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?q=80&w=1000" alt="Mulher" className="w-full h-auto block" />
           </div>
           <div className="rounded-[2.5rem] overflow-hidden shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=1000&auto=format&fit=crop" alt="Calendário PRO" className="w-full h-auto block" />
+            <img src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=1000" alt="Calendário" className="w-full h-auto block" />
           </div>
         </div>
 
-        {/* 5. Texto de Cópia */}
+        {/* 5. Texto de Cópia e Benefícios */}
         <div className="mt-16 max-w-3xl mx-auto text-left space-y-8 text-slate-700 leading-relaxed">
           <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 space-y-6">
-            <p className="text-lg">Ter 250 receitas é o primeiro passo. Mas sem um plano de execução, o teu congelador vai continuar vazio e a tua cozinha vai continuar um caos.</p>
+            <p className="text-lg">Ter 250 receitas é o primeiro passo. Mas sem um plano de execução, o teu congelador vai continuar vazio.</p>
             <div className="bg-slate-50 p-6 rounded-2xl border-l-4 border-green-500 italic font-bold text-slate-900">
               "Como é que organizo as compras e o preparo para cozinhar apenas uma vez e ter a semana toda resolvida?"
             </div>
-            <p className="text-lg">Para resolver isto, criei o <span className="text-green-600 font-bold">Guia de Organização Pro</span>. É o complemento ideal para as tuas 250 receitas.</p>
           </div>
 
-          <div className="bg-green-50 p-8 rounded-3xl border-2 border-dashed border-green-200">
-             <h3 className="text-xl font-bold text-green-800 mb-4">🎯 O que vais receber:</h3>
-             <ul className="space-y-4">
-                <li className="flex gap-3"><CheckCircle2 className="text-green-500 flex-shrink-0" /> <b>Calendário de Preparação:</b> Cozinha a semana toda em 2h.</li>
-                <li className="flex gap-3"><CheckCircle2 className="text-green-500 flex-shrink-0" /> <b>Listas de Compras:</b> Quantidades exatas para o mercado.</li>
-                <li className="flex gap-3"><CheckCircle2 className="text-green-500 flex-shrink-0" /> <b>Macros Detalhados:</b> Calorias de cada prato.</li>
-             </ul>
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-slate-800">O que vais receber no Guia de Organização Pro:</h3>
+            <ul className="grid gap-4">
+              <li className="flex items-start gap-3 bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
+                <CheckCircle2 size={24} className="text-green-500 flex-shrink-0 mt-1" />
+                <div><span className="font-bold text-slate-900">Calendário de Preparação:</span> Cozinha a semana toda em 2h.</div>
+              </li>
+              <li className="flex items-start gap-3 bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
+                <CheckCircle2 size={24} className="text-green-500 flex-shrink-0 mt-1" />
+                <div><span className="font-bold text-slate-900">Listas de Compras Inteligentes:</span> Quantidades exatas para o mercado.</div>
+              </li>
+              <li className="flex items-start gap-3 bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
+                <CheckCircle2 size={24} className="text-green-500 flex-shrink-0 mt-1" />
+                <div><span className="font-bold text-slate-900">Contagem de Macros:</span> O cálculo detalhado de cada refeição.</div>
+              </li>
+            </ul>
           </div>
         </div>
 
         {/* 6. Box de Preço */}
         <div className="mt-16 max-w-3xl mx-auto px-4">
-          <div className="bg-[#fff9f2] border-l-[6px] border-[#f97316] rounded-r-2xl p-8 shadow-sm text-center">
+          <div className="bg-[#fff9f2] border-l-[6px] border-[#f97316] rounded-r-2xl p-8 shadow-sm">
             <p className="text-xl md:text-2xl text-slate-800 font-semibold">
-              🎯 Fora desta página é <span className="text-red-600 line-through font-bold">97€</span>, hoje você leva por apenas <span className="text-green-600 font-extrabold">17€</span>.
+              🎯 Fora desta página é <span className="text-red-600 line-through">97€</span>, hoje você leva por apenas <span className="text-green-600 font-extrabold">17€</span>.
             </p>
           </div>
+        </div>
+
+        {/* Imagem de Prova Social */}
+        <div className="mt-20 max-w-md mx-auto">
+          <img src="https://iili.io/qFCDIEb.png" alt="Prova Social" className="w-full h-auto rounded-[2.5rem] shadow-2xl" />
         </div>
 
         {/* 7. Depoimentos */}
@@ -112,17 +127,29 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        {/* 8. Botão Hotmart */}
+        {/* 8. Aviso de Atenção (Vermelho) */}
+        <div className="mt-20 max-w-4xl mx-auto px-4">
+          <div className="bg-[#fff5f5] border border-[#ff4d4d] rounded-2xl p-10 md:p-14 shadow-lg">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#b91c1c] mb-8">🔥 Atenção!</h2>
+            <p className="text-lg md:text-2xl text-slate-700 mb-8">
+              Hoje, somente nesta página, você tem a oportunidade de adquirir o <span className="font-bold">Guia de Organização Pro</span> por apenas <span className="text-[#22c55e] font-black">17€</span>.
+            </p>
+            <p className="text-lg md:text-2xl font-bold text-[#b91c1c]">Se fechar ou sair desta página, não conseguirá mais esta promoção exclusiva.</p>
+          </div>
+        </div>
+
+        {/* 9. Widget Hotmart */}
         <div className="mt-20 flex justify-center">
           <div id="hotmart-sales-funnel" className="w-full max-w-2xl"></div>
         </div>
       </main>
 
-      <footer className="mt-40 opacity-30 text-center text-[10px] uppercase tracking-widest">
-        © 2026 Guia de Organização Pro. Todos os direitos reservados.
+      <footer className="mt-40 border-t border-slate-200 py-20 text-center opacity-30">
+        <p className="text-[10px] uppercase tracking-widest">© 2026 Guia de Organização Pro. Todos os direitos reservados.</p>
       </footer>
     </div>
   );
 };
 
 export default App;
+
