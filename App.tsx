@@ -17,7 +17,6 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#fafafa] pb-20 text-slate-900">
-      {/* 1. Alerta Vermelho Superior */}
       <div className="bg-[#ff0000] py-2 px-4 text-center">
         <p className="text-white font-black text-xs md:text-sm tracking-tighter flex items-center justify-center gap-2 uppercase">
           <AlertTriangle size={16} fill="white" className="text-red-600" />
@@ -25,7 +24,6 @@ const App: React.FC = () => {
         </p>
       </div>
 
-      {/* 2. Barra de Progresso */}
       <div className="max-w-2xl mx-auto px-4 mt-6">
         <div className="flex flex-col items-center gap-2">
           <p className="text-green-600 text-sm font-bold flex items-center gap-1">
@@ -38,7 +36,6 @@ const App: React.FC = () => {
         </div>
       </div>
 
-      {/* 3. Caixa de Aviso Amarela */}
       <div className="max-w-3xl mx-auto px-4 mt-8">
         <div className="bg-[#fff9db] border border-[#fadb5f] rounded-lg p-6 text-center space-y-3">
           <p className="text-slate-800 text-sm md:text-base leading-tight">
@@ -51,7 +48,6 @@ const App: React.FC = () => {
         </div>
       </div>
 
-      {/* 4. Headline e Imagens */}
       <main className="max-w-6xl mx-auto px-4 mt-12 text-center">
         <h1 className="text-2xl md:text-5xl font-extrabold text-slate-800 leading-tight mb-10 max-w-5xl mx-auto">
           Já tens as receitas… mas sabes como <span className="text-green-600">organizar o congelador</span> para garantir refeições prontas durante os próximos 2 meses?
@@ -66,17 +62,17 @@ const App: React.FC = () => {
           </div>
         </div>
 
-        {/* 5. Texto de Cópia e Benefícios */}
         <div className="mt-16 max-w-3xl mx-auto text-left space-y-8 text-slate-700 leading-relaxed">
           <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 space-y-6">
             <p className="text-lg">Ter 250 receitas é o primeiro passo. Mas sem um plano de execução, o teu congelador vai continuar vazio.</p>
             <div className="bg-slate-50 p-6 rounded-2xl border-l-4 border-green-500 italic font-bold text-slate-900">
               "Como é que organizo as compras e o preparo para cozinhar apenas uma vez e ter a semana toda resolvida?"
             </div>
+            <p className="text-lg">Para resolver isto, criei o <span className="text-green-600 font-bold">Guia de Organização Pro</span>.</p>
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-slate-800">O que vais receber no Guia de Organização Pro:</h3>
+            <h3 className="text-xl font-bold text-slate-800">O que vais receber:</h3>
             <ul className="grid gap-4">
               <li className="flex items-start gap-3 bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
                 <CheckCircle2 size={24} className="text-green-500 flex-shrink-0 mt-1" />
@@ -86,15 +82,10 @@ const App: React.FC = () => {
                 <CheckCircle2 size={24} className="text-green-500 flex-shrink-0 mt-1" />
                 <div><span className="font-bold text-slate-900">Listas de Compras Inteligentes:</span> Quantidades exatas para o mercado.</div>
               </li>
-              <li className="flex items-start gap-3 bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
-                <CheckCircle2 size={24} className="text-green-500 flex-shrink-0 mt-1" />
-                <div><span className="font-bold text-slate-900">Contagem de Macros:</span> O cálculo detalhado de cada refeição.</div>
-              </li>
             </ul>
           </div>
         </div>
 
-        {/* 6. Box de Preço */}
         <div className="mt-16 max-w-3xl mx-auto px-4">
           <div className="bg-[#fff9f2] border-l-[6px] border-[#f97316] rounded-r-2xl p-8 shadow-sm">
             <p className="text-xl md:text-2xl text-slate-800 font-semibold">
@@ -103,12 +94,10 @@ const App: React.FC = () => {
           </div>
         </div>
 
-        {/* Imagem de Prova Social */}
         <div className="mt-20 max-w-md mx-auto">
           <img src="https://iili.io/qFCDIEb.png" alt="Prova Social" className="w-full h-auto rounded-[2.5rem] shadow-2xl" />
         </div>
 
-        {/* 7. Depoimentos */}
         <section className="mt-20 bg-white rounded-[3rem] p-10 shadow-sm border border-slate-100">
           <h2 className="text-3xl font-black text-slate-800 mb-12">✨ O que dizem as nossas clientes</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -119,7 +108,7 @@ const App: React.FC = () => {
                   <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full" />
                   <div>
                     <p className="font-bold text-slate-800">{t.name}</p>
-                    <div className="flex text-yellow-400"><Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" /></div>
+                    <div className="flex text-yellow-400"><Star size={12} fill="currentColor" /><Star size={12} fill="currentColor" /><Star size={12} fill="currentColor" /><Star size={12} fill="currentColor" /><Star size={12} fill="currentColor" /></div>
                   </div>
                 </div>
               </div>
@@ -127,18 +116,16 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        {/* 8. Aviso de Atenção (Vermelho) */}
         <div className="mt-20 max-w-4xl mx-auto px-4">
           <div className="bg-[#fff5f5] border border-[#ff4d4d] rounded-2xl p-10 md:p-14 shadow-lg">
             <h2 className="text-3xl md:text-4xl font-bold text-[#b91c1c] mb-8">🔥 Atenção!</h2>
             <p className="text-lg md:text-2xl text-slate-700 mb-8">
-              Hoje, somente nesta página, você tem a oportunidade de adquirir o <span className="font-bold">Guia de Organização Pro</span> por apenas <span className="text-[#22c55e] font-black">17€</span>.
+              Hoje, somente nesta página, você tem a oportunidade de adquirir o <span className="font-bold uppercase">Guia de Organização Pro</span> por apenas <span className="text-[#22c55e] font-black">17€</span>.
             </p>
             <p className="text-lg md:text-2xl font-bold text-[#b91c1c]">Se fechar ou sair desta página, não conseguirá mais esta promoção exclusiva.</p>
           </div>
         </div>
 
-        {/* 9. Widget Hotmart */}
         <div className="mt-20 flex justify-center">
           <div id="hotmart-sales-funnel" className="w-full max-w-2xl"></div>
         </div>
@@ -152,4 +139,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
